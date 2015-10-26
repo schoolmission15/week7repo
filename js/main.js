@@ -45,10 +45,7 @@ function setup(){
 //    console.log(myArray);
 //    console.log("myArray", myArray);
 
-    for (var i=0; i< myArray.lengh; i++) {
-//        myArray[i] +=10
-    }
-
+   // grouptwo
     console.log(myArray);
 
 }//end setup
@@ -56,9 +53,19 @@ function setup(){
 //listen for mouse presses with the built-in p5 mousePressed method
 function mousePressed(){
 //check that this is working
-    console.log("mouse Pressed");
+    //console.log("mouse Pressed");
 
     //loop through myArrary and check if mouse is in each bubble
-    console.log(myArray);
 
+    var d;
+
+    for(var i=0; i< myArray.lengh; i++) {
+
+        d = dist(mouseX, mouseY, myArray[i].x, myArray[i].y);
+//        myArray[i] +=10
+
+               if(d < myArray[i].r) {
+            console.log("circle is clicked");
+    }
+    }
 }//end mousePressed
