@@ -1,5 +1,5 @@
 //global variables
-
+var myArray = []; //create blank array
 
 //bubble constuction
 function Bubble(){
@@ -26,7 +26,7 @@ function setup(){
     var cnv = createCanvas(windowWidth,windowHeight);
     cnv.parent("windows");
 
-    var myArray = [];
+
     for (var i=0; i<100; i++){
 //        myArray [i] = "item" + i;
        // myArray [i] = i;
@@ -58,5 +58,7 @@ function mousePressed(){
 //check that this is working
     console.log("mouse Pressed");
 
-    //loop through the bubbles and see if the mouse is inside of them
-}
+    //loop through myArrary and check if mouse is in each bubble
+    console.log(myArray);
+
+}//end mousePressed
