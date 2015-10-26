@@ -1,15 +1,23 @@
 //global variables
 
+
 //bubble constuction
-function bubble(){
+function Bubble(){
     //create x and y properties (variables)
     this.x = random(width);
     this.y = random(height);
     this.r = 20; //r os fpr radius which is 1/2 the width of the circle
     this.bubbleSize = this.r*2;//width and height are twice the radius
     //draw the bubble
-    this.col = fill("lightblue");
+
+    //method: draw the bubble
+    this.drawBubble = function(){
     ellipse(this.x, this.y, this.bubbleSize, this.bubbleSize);
+    }
+
+    this.col = fill("lightblue");{
+    //ellipse(this.x, this.y, this.bubbleSize, this.bubbleSize);
+    }
 }//end bubble
 
 
@@ -19,12 +27,13 @@ function setup(){
     cnv.parent("windows");
 
     var myArray = [];
-    for (var i=0; i<1000; i++){
+    for (var i=0; i<100; i++){
 //        myArray [i] = "item" + i;
        // myArray [i] = i;
 
        // myArray[i] = ellipse(i,i,10,10);
-        myArray[i] = new bubble();
+        myArray[i] = new Bubble();
+        myArray[i].drawBubble();
     }
     console.log(myArray);
 
@@ -44,3 +53,10 @@ function setup(){
 
 }//end setup
 
+//listen for mouse presses with the built-in p5 mousePressed method
+function mousePressed(){
+//check that this is working
+    console.log("mouse Pressed");
+
+    //loop through the bubbles and see if the mouse is inside of them
+}
